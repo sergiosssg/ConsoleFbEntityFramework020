@@ -52,6 +52,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DbAppContext.cs" />
     <Compile Include="PO_PO_TEL_OPERATOR.cs" />
     <Compile Include="PO_TEL_VID_CONNECT.cs" />
     <Compile Include="Program.cs" />
