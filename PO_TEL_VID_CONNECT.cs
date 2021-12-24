@@ -13,7 +13,7 @@ namespace ConsoleFbEntityFramework020
 
         public PO_TEL_VID_CONNECT()
         {
-            /*pO_TEL_OPERATORs = new List<PO_TEL_OPERATOR>();*/
+            pO_TEL_OPERATORs = new List<PO_TEL_OPERATOR>();
         }
 
 /*        [Required]*/
@@ -44,7 +44,7 @@ namespace ConsoleFbEntityFramework020
         }
 
 
-        /*public ICollection<PO_TEL_OPERATOR> pO_TEL_OPERATORs { get; set; }*/
+        public ICollection<PO_TEL_OPERATOR> pO_TEL_OPERATORs { get; set; }
 
     }
 
