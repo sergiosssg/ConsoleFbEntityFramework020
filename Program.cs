@@ -120,8 +120,8 @@ namespace ConsoleFbEntityFramework020
             //dbConnectionStringBuilder["ClientLibrary"] = @"C:\Program Files\Firebird\Firebird_2_5\bin\fbclient.dll";
 
             dbConnectionStringBuilder["Data Source"] = "localhost";
-            //dbConnectionStringBuilder["Initial Catalog"] = @"C:\SSG\PROJECTs\TELET\DB4TELEFONE\sampd_cexs.fdb";//"sampd_cexs";
-            dbConnectionStringBuilder["Database"] = Path.Combine(strExePath, "tmp.fdb");
+            dbConnectionStringBuilder["Initial Catalog"] = @"C:\SSG\PROJECTs\CourseS\TeachThrough\FDBWorking\ConsoleAppFbFramework019\bin\Debug\tmp.fdb";//@"C:\SSG\PROJECTs\TELET\DB4TELEFONE\sampd_cexs.fdb";//"sampd_cexs";
+            //dbConnectionStringBuilder["Database"] = Path.Combine(strExePath, "tmp.fdb");
 
             dbConnectionStringBuilder["User ID"] = "sysdba";
             dbConnectionStringBuilder["Password"] = "masterkey";
@@ -129,7 +129,7 @@ namespace ConsoleFbEntityFramework020
             dbConnectionStringBuilder["Charset"] = "UTF8";
 
 
-            dbConnectionStringBuilder["Embedded"] = FbServerType.Embedded;
+            //dbConnectionStringBuilder["Embedded"] = FbServerType.Embedded;
             //dbConnectionStringBuilder["integrated Security"] = "SSPI";
 
             return dbConnectionStringBuilder.ConnectionString;
