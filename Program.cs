@@ -101,7 +101,7 @@ namespace ConsoleFbEntityFramework020
                 }
                 catch (FbException fbSqlEx)
                 {
-
+                    ;
                 }
 
                 catch (SqlException sqlEx)
