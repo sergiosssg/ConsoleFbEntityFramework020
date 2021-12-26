@@ -119,7 +119,8 @@ namespace ConsoleFbEntityFramework020
 
             //dbConnectionStringBuilder["ClientLibrary"] = @"C:\Program Files\Firebird\Firebird_2_5\bin\fbclient.dll";
 
-            dbConnectionStringBuilder["Data Source"] = "localhost";
+            //dbConnectionStringBuilder["Data Source"] = "localhost";
+            dbConnectionStringBuilder["Data Source"] = "127.0.0.1";
             dbConnectionStringBuilder["Initial Catalog"] = @"C:\SSG\PROJECTs\CourseS\TeachThrough\FDBWorking\ConsoleAppFbFramework019\bin\Debug\tmp.fdb";//@"C:\SSG\PROJECTs\TELET\DB4TELEFONE\sampd_cexs.fdb";//"sampd_cexs";
             //dbConnectionStringBuilder["Database"] = Path.Combine(strExePath, "tmp.fdb");
 
