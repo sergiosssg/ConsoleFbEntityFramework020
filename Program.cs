@@ -99,6 +99,11 @@ namespace ConsoleFbEntityFramework020
                     dbConnection.Close();
                     correctConnectionToDB = true;
                 }
+                catch (FbException fbSqlEx)
+                {
+
+                }
+
                 catch (SqlException sqlEx)
                 {
                     ;
