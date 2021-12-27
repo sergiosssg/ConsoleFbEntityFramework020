@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -7,7 +9,7 @@ using System.Threading.Tasks;
 namespace ConsoleFbEntityFramework020
 {
 
-/*    [Table("TEL_VID_CONNECT")]*/
+    [Table("TEL_VID_CONNECT")]
     public class PO_TEL_VID_CONNECT
     {
 
@@ -16,9 +18,9 @@ namespace ConsoleFbEntityFramework020
             pO_TEL_OPERATORs = new List<PO_TEL_OPERATOR>();
         }
 
-/*        [Required]*/
-/*        [Key]*/
-/*        [Column("ID_CONNECT")]*/
+        [Required]
+        [Key]
+        [Column("ID_CONNECT")]
         public int Id
         {   //   ID_CONNECT   (PK)
             get;
@@ -26,8 +28,8 @@ namespace ConsoleFbEntityFramework020
         }
 
 
-/*        [Column("KOD_CONNECT")]*/
-/*        [MaxLength(1)]*/
+        [Column("KOD_CONNECT")]
+        [MaxLength(1)]
         public string KodOfConnect
         {    //   KOD_CONNECT   C[1]
             get;
@@ -35,8 +37,8 @@ namespace ConsoleFbEntityFramework020
         }
 
 
-/*        [Column("NAME_CONNECT")]*/
-/*        [MaxLength(50)]*/
+        [Column("NAME_CONNECT")]
+        [MaxLength(50)]
         public string Name
         {    //   NAME_CONNECT  V[50]
             get;

@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -7,13 +9,13 @@ using System.Threading.Tasks;
 namespace ConsoleFbEntityFramework020
 {
 
-    /*[Table("TEL_OPERATOR")]*/
+    [Table("TEL_OPERATOR")]
     public class PO_TEL_OPERATOR
     {
 
-/*        [Required]*/
-/*        [Key]*/
-/*        [Column("ID_OPERATOR")]*/
+        [Required]
+        [Key]
+        [Column("ID_OPERATOR")]
         public int Id
         { //  ID_OPERATOR   (PK)
             get;
@@ -21,8 +23,8 @@ namespace ConsoleFbEntityFramework020
         }
 
 
-/*        [Column("KOD_OPERATOR")]*/
-/*        [MaxLength(2)]*/
+        [Column("KOD_OPERATOR")]
+        [MaxLength(2)]
         public string Kod
         {  //  KOD_OPERATOR   C[2]
             get;
@@ -30,8 +32,8 @@ namespace ConsoleFbEntityFramework020
         }
 
 
-/*        [Column("NAME_OPERATOR")]*/
-/*        [MaxLength(50)]*/
+        [Column("NAME_OPERATOR")]
+        [MaxLength(50)]
         public string Name
         {  //   NAME_OPERATOR   V[50]
             get;
@@ -39,14 +41,14 @@ namespace ConsoleFbEntityFramework020
         }
 
 
-/*        [Column("ID_BK")]*/
+        [Column("ID_BK")]
         public int? IdOfKodBudjet  // Ид бюджкода
         {  //   ID_BK
             get;
             set;
         }
 
-/*        [Column("ID_CONNECT")]*/
+        [Column("ID_CONNECT")]
         public int IdOfConnectType
         {  //  ID_CONNECT  (FK  ==>  TEL_VID_CONNECT)
             get;
@@ -54,7 +56,7 @@ namespace ConsoleFbEntityFramework020
         }
 
 
-/*        [Column("ID_KAGENT")]*/
+        [Column("ID_KAGENT")]
         public int? IdOfKagent // Идентификатор контрагента
         {  //   ID_KAGENT
             get;
@@ -62,8 +64,8 @@ namespace ConsoleFbEntityFramework020
         }
 
 
-/*        [Column("NOM_DOG")]*/
-/*        [MaxLength(22)]*/
+        [Column("NOM_DOG")]
+        [MaxLength(22)]
         public string NumberOfContract // Номер договора
         {  //   NOM_DOG   V[22]
             get;
@@ -71,7 +73,7 @@ namespace ConsoleFbEntityFramework020
         }
 
 
-/*        [Column("DATE_DOG")]*/
+        [Column("DATE_DOG")]
         public DateTime DateOfContract //Дата договора
         {  //   DATE_DOG
             get;
