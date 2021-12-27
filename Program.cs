@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Data.Common;
+using System.Data.Entity;
 using System.Data.SqlClient;
 using System.IO;
 using System.Linq;
@@ -17,36 +18,38 @@ namespace ConsoleFbEntityFramework020
         {
             string strConnection2FB = makeCoonectionString2FB();
 
-            connToDBsimple(strConnection2FB);
+            //connToDBsimple(strConnection2FB);
+
+            var dbcontext = connToDBEntity(strConnection2FB);
 
         }
 
 
-        private static /*DbContext*/ void connToDBEntity(string sConnectionString)
+        private static DbContext connToDBEntity(string sConnectionString)
         {
-            /*
+
             try
-            {*/
+            {
 
 
-                /*using (var dbContent = new DbAppContext(sConnectionString))
+                using (var dbContent = new DbAppContext(sConnectionString))
                 {
 
 
 
-                    *//*                    var simpleQueryOfVidConnects = dbContent.pO_TEL_VID_CONNECTs.Where(s => s.Id > 0);
+                    var simpleQueryOfVidConnects = dbContent.pO_TEL_VID_CONNECTs.Where(s => s.Id > 0);
 
 
-                                        Console.WriteLine("=================================================");
-                                        foreach (var oneElement in simpleQueryOfVidConnects)
-                                        {
-                                            Console.WriteLine(" Id = {0}  Kod СЃРІСЏР·Рё {1}  РќР°Р·РІР°РЅРёРµ РІРёРґР° СЃРІСЏР·Рё {2}", oneElement.Id, oneElement.KodOfConnect, oneElement.Name);
-                                        }
-                                        Console.WriteLine("=================================================");*//*
+                    Console.WriteLine("=================================================");
+                    foreach (var oneElement in simpleQueryOfVidConnects)
+                    {
+                        Console.WriteLine(" Id = {0}  Kod СЃРІСЏР·Рё {1}  РќР°Р·РІР°РЅРёРµ РІРёРґР° СЃРІСЏР·Рё {2}", oneElement.Id, oneElement.KodOfConnect, oneElement.Name);
+                    }
+                    Console.WriteLine("=================================================");
 
 
 
-                    var dataTable = GetProviderFactoryClasses();
+                    //var dataTable = GetProviderFactoryClasses();
 
                     var simpleVidConnects = dbContent.pO_TEL_VID_CONNECTs;
 
@@ -66,10 +69,10 @@ namespace ConsoleFbEntityFramework020
             catch (Exception ex)
             {
 
-            }*/
-            /*return null;*/
+            }
+            return null;
 
-        }
+            }
 
 
 
